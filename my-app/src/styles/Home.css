@@ -1,0 +1,40 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.home-header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-header h1 {
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.home-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  color: #333;
+}
