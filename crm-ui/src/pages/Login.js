@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { loginUser } from '../services/api';
 import '../styles/Login.css';
 
 function Login() {
@@ -7,10 +8,14 @@ function Login() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (username && password) {
+    try {
+      const response = await loginUser({ username, password });
+      localStorage.setItem('token', response.token);
       navigate('/home');
+    } catch (error) {
+      alert('Login failed. Please check your credentials.');
     }
   };
 
